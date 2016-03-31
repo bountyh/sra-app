@@ -4,6 +4,36 @@ import sraService from '../services/sra-service.localhost';
 
 export const GET_RESULTS = 'GET_RESULTS';
 export const GET_RESULT = 'GET_RESULT';
+export const GET_COMPETITORS = 'GET_COMPETITORS';
+export const REORDER_RESULTS = 'REORDER_RESULTS';
+
+export function reorderResults(orderBy, reverse = false) {
+	let primer;
+	switch (orderBy) {
+		case 'Date':
+			primer = function(a) {
+				return Date.parse(a);
+			}
+		break;
+
+		default:
+			primer = function(a) {
+				return a.toUpperCase();
+			}
+		break;
+	}
+
+	
+
+	return {
+		type: REORDER_RESULTS,
+		payload: {
+			orderBy: orderBy,
+			reverse: reverse,
+			primer: primer
+		}
+	};
+}
 
 export function getResults() {
     return function (dispatch) {
@@ -14,6 +44,17 @@ export function getResults() {
             });
         });
     };
+}
+
+export function getCompetitors() {
+	return function (dispatch) {
+		return sraService.get('competitors', 0).then(competitors => {
+			dispatch({
+				type: GET_COMPETITORS,
+				payload: competitors
+			})
+		});
+	};
 }
 
 export function getResult(id) {

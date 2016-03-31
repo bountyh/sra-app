@@ -5,6 +5,7 @@ import App from './components/container/AppContainer';
 import IndexPage from './components/container/IndexPageContainer';
 import ResultsPage from './components/container/ResultsPageContainer';
 import { getNewest } from './actions/indexpage-actions';
+import { getResults, getCompetitors } from './actions/resultspage-actions';
 
 export function createRouter({ store, history }) {
 
@@ -23,11 +24,20 @@ export function createRouter({ store, history }) {
         });
     }
 
+    function initResults(nextState, replaceState, callback) {
+        store.dispatch(getResults()).then(() => {
+            store.dispatch(getCompetitors()).then(() => {
+                callback();
+            });
+        });     
+    }
+
     return (
         <Router history={history}>
             <Route path="/" component={App} onEnter={initApp}>
                 <IndexRoute component={IndexPage} onEnter={checkFetcher}/>
-                <Route path="/results" component={ResultsPage} />
+                <Route path="/results" component={ResultsPage} onEnter={initResults}/>
+                <Route path="/results/:id" component={IndexPage} />
             </Route>
         </Router>
     );

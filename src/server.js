@@ -78,7 +78,81 @@ createServer(config, webpackConfig, (app) => {
             }
         ]
     }
-    ); 
+    );
+
+    let results = List.of(
+        {
+            "id": 1,
+            "name": "SM Pohjois-karjala",
+            "Date": "08.01.2015",
+            "Partipicants": [1, 10, 50,25],
+            "winner": 10
+         },
+         {
+            "id": 2,
+            "name": "VaRES loppi",
+            "Date": "22.01.2015",
+            "Partipicants": [1, 10, 50,25],
+            "winner": 10
+        },
+        {
+            "id": 3,
+            "name": "Stadin Sissit kesäkisa",
+            "Date": "05.02.2015",
+            "Partipicants": [1, 10, 50,25],
+            "winner": 50
+        },
+        {
+            "id": 4,
+            "name": "KirkRES Upinniemi",
+            "Date": "01.03.2015",
+            "Partipicants": [1, 10, 50,25],
+            "winner": 1
+        },
+        {
+            "id": 5,
+            "name": "Hot Steel Heinola",
+            "Date": "21.04.2015",
+            "Partipicants": [1, 10, 50,25],
+            "winner": 25
+        },
+        {
+            "id": 6,
+            "name": "Pikijärventie Karsinta",
+            "Date": "29.10.2015",
+            "Partipicants": [1, 10, 50,25],
+            "winner": 25
+        }
+    );
+
+    let competitors = List.of(
+        {
+            "id": 1,
+            "name": 'Petri Parkkonen'
+        },
+        {
+            "id": 10,
+            "name": 'Sami Jääskeläinen'
+        },
+        {
+            "id": 25,
+            "name": 'Matti Meikäläinen'
+        },
+        {
+            "id": 50,
+            "name": 'Keijjo Kekäläinen'
+        }
+    );
+
+    app.get('/api/competitors*', function(req, res, next) {
+
+        setTimeout(
+            function() {
+                res.send(competitors.toJS());
+            },
+            Math.random() * 300
+        );
+    });
 
     app.get('/api/newest*', function(req, res, next) {
 
@@ -90,9 +164,13 @@ createServer(config, webpackConfig, (app) => {
         );
     });
 
-    app.post('/api/todo', function(req, res, next) {
-        todos = List(req.body);
-        res.send(['ok']);
+    app.get('/api/results*', function(req, res, next) {
+        setTimeout(
+            function() {
+                res.send(results.toJS());
+            },
+            Math.random() * 300
+        );
     });
 
 
