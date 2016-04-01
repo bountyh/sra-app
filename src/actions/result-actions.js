@@ -6,10 +6,10 @@ export const GET_RESULT = 'GET_RESULT';
 
 export function getResult(id) {
     return function (dispatch) {
-        return sraService.get('newest', amount).then(newest => {
+        return sraService.get('result', id).then(result => {
             dispatch({
                 type: GET_RESULT,
-                payload: newest
+                payload: result[0]
             });
         });
     };

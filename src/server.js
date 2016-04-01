@@ -125,6 +125,1150 @@ createServer(config, webpackConfig, (app) => {
         }
     );
 
+    let fullResults = List.of(
+        {
+            "compid": 6,
+            "combined": {
+                "results": [
+                    {
+                        "rating": 1,
+                        "percent": 100,
+                        "pointsFinal": 112,
+                        "user": 1,
+                        "class": "Avo"
+                    },
+                    {
+                        "rating": 2,
+                        "percent": 96.44,
+                        "pointsFinal": 102,
+                        "user": 10,
+                        "class": "Avo"
+                        
+                    },
+                    {
+                        "rating": 3,
+                        "percent": 85.44,
+                        "pointsFinal": 84,
+                        "user": 25,
+                        "class": "Avo"
+                    },
+                    {
+                        "rating": 4,
+                        "percent": 96.44,
+                        "pointsFinal": 81,
+                        "user": 50,
+                    },
+                ]
+            },
+            "stages": [
+                {
+                    "stage": 1,
+                    "name": "Monttu1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                },
+                {
+                    "stage": 2,
+                    "name": "Kivääri 1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                },
+                {
+                    "stage": 3,
+                    "name": "Pistooli 1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "compid": 1,
+            "combined": {
+                "results": [
+                    {
+                        "rating": 1,
+                        "percent": 100,
+                        "pointsFinal": 112,
+                        "user": 1,
+                        "class": "Avo"
+                    },
+                    {
+                        "rating": 2,
+                        "percent": 96.44,
+                        "pointsFinal": 102,
+                        "user": 10,
+                        "class": "Avo"
+                        
+                    },
+                    {
+                        "rating": 3,
+                        "percent": 85.44,
+                        "pointsFinal": 84,
+                        "user": 25,
+                        "class": "Avo"
+                    },
+                    {
+                        "rating": 4,
+                        "percent": 96.44,
+                        "pointsFinal": 81,
+                        "user": 50,
+                    },
+                ]
+            },
+            "stages": [
+                {
+                    "stage": 1,
+                    "name": "Monttu1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                },
+                {
+                    "stage": 2,
+                    "name": "Kivääri 1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                },
+                {
+                    "stage": 3,
+                    "name": "Pistooli 1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "compid": 2,
+            "combined": {
+                "results": [
+                    {
+                        "rating": 1,
+                        "percent": 100,
+                        "pointsFinal": 112,
+                        "user": 1,
+                        "class": "Avo"
+                    },
+                    {
+                        "rating": 2,
+                        "percent": 96.44,
+                        "pointsFinal": 102,
+                        "user": 10,
+                        "class": "Avo"
+                        
+                    },
+                    {
+                        "rating": 3,
+                        "percent": 85.44,
+                        "pointsFinal": 84,
+                        "user": 25,
+                        "class": "Avo"
+                    },
+                    {
+                        "rating": 4,
+                        "percent": 96.44,
+                        "pointsFinal": 81,
+                        "user": 50,
+                    },
+                ]
+            },
+            "stages": [
+                {
+                    "stage": 1,
+                    "name": "Monttu1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                },
+                {
+                    "stage": 2,
+                    "name": "Kivääri 1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                },
+                {
+                    "stage": 3,
+                    "name": "Pistooli 1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "compid": 3,
+            "combined": {
+                "results": [
+                    {
+                        "rating": 1,
+                        "percent": 100,
+                        "pointsFinal": 112,
+                        "user": 1,
+                        "class": "Avo"
+                    },
+                    {
+                        "rating": 2,
+                        "percent": 96.44,
+                        "pointsFinal": 102,
+                        "user": 10,
+                        "class": "Avo"
+                        
+                    },
+                    {
+                        "rating": 3,
+                        "percent": 85.44,
+                        "pointsFinal": 84,
+                        "user": 25,
+                        "class": "Avo"
+                    },
+                    {
+                        "rating": 4,
+                        "percent": 96.44,
+                        "pointsFinal": 81,
+                        "user": 50,
+                    },
+                ]
+            },
+            "stages": [
+                {
+                    "stage": 1,
+                    "name": "Monttu1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                },
+                {
+                    "stage": 2,
+                    "name": "Kivääri 1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                },
+                {
+                    "stage": 3,
+                    "name": "Pistooli 1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "compid": 4,
+            "combined": {
+                "results": [
+                    {
+                        "rating": 1,
+                        "percent": 100,
+                        "pointsFinal": 112,
+                        "user": 1,
+                        "class": "Avo"
+                    },
+                    {
+                        "rating": 2,
+                        "percent": 96.44,
+                        "pointsFinal": 102,
+                        "user": 10,
+                        "class": "Avo"
+                        
+                    },
+                    {
+                        "rating": 3,
+                        "percent": 85.44,
+                        "pointsFinal": 84,
+                        "user": 25,
+                        "class": "Avo"
+                    },
+                    {
+                        "rating": 4,
+                        "percent": 96.44,
+                        "pointsFinal": 81,
+                        "user": 50,
+                    },
+                ]
+            },
+            "stages": [
+                {
+                    "stage": 1,
+                    "name": "Monttu1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                },
+                {
+                    "stage": 2,
+                    "name": "Kivääri 1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                },
+                {
+                    "stage": 3,
+                    "name": "Pistooli 1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "compid": 5,
+            "combined": {
+                "results": [
+                    {
+                        "rating": 1,
+                        "percent": 100,
+                        "pointsFinal": 112,
+                        "user": 1,
+                        "class": "Avo"
+                    },
+                    {
+                        "rating": 2,
+                        "percent": 96.44,
+                        "pointsFinal": 102,
+                        "user": 10,
+                        "class": "Avo"
+                        
+                    },
+                    {
+                        "rating": 3,
+                        "percent": 85.44,
+                        "pointsFinal": 84,
+                        "user": 25,
+                        "class": "Avo"
+                    },
+                    {
+                        "rating": 4,
+                        "percent": 96.44,
+                        "pointsFinal": 81,
+                        "user": 50,
+                    },
+                ]
+            },
+            "stages": [
+                {
+                    "stage": 1,
+                    "name": "Monttu1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                },
+                {
+                    "stage": 2,
+                    "name": "Kivääri 1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                },
+                {
+                    "stage": 3,
+                    "name": "Pistooli 1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "compid": 6,
+            "combined": {
+                "results": [
+                    {
+                        "rating": 1,
+                        "percent": 100,
+                        "pointsFinal": 112,
+                        "user": 1,
+                        "class": "Avo"
+                    },
+                    {
+                        "rating": 2,
+                        "percent": 96.44,
+                        "pointsFinal": 102,
+                        "user": 10,
+                        "class": "Avo"
+                        
+                    },
+                    {
+                        "rating": 3,
+                        "percent": 85.44,
+                        "pointsFinal": 84,
+                        "user": 25,
+                        "class": "Avo"
+                    },
+                    {
+                        "rating": 4,
+                        "percent": 96.44,
+                        "pointsFinal": 81,
+                        "user": 50,
+                    },
+                ]
+            },
+            "stages": [
+                {
+                    "stage": 1,
+                    "name": "Monttu1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                },
+                {
+                    "stage": 2,
+                    "name": "Kivääri 1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                },
+                {
+                    "stage": 3,
+                    "name": "Pistooli 1",
+                    "results": [
+                        {
+                            "user": 1,
+                            "time": 10.24,
+                            "rating": 1,
+                            "pointsFinal": 112,
+                            "hitRate": 5.6,
+                            "points": 130,
+                            "percent": 100
+                        },
+                        {
+                            "user": 10,
+                            "time": 10.94,
+                            "rating": 2,
+                            "pointsFinal": 102,
+                            "hitRate": 5.4,
+                            "points": 120,
+                            "percent": 96.44
+                        },
+                        {
+                            "user": 25,
+                            "time": 11.94,
+                            "rating": 3,
+                            "pointsFinal": 84,
+                            "hitRate": 5.12,
+                            "points": 89,
+                            "percent": 85.44
+                        },
+                        {
+                            "user": 50,
+                            "time": 13.04,
+                            "rating": 4,
+                            "pointsFinal": 81,
+                            "hitRate": 4.3,
+                            "points": 84,
+                            "percent": 96.44
+                        },
+                    ]
+                }
+            ]
+        }
+    );
+
     let competitors = List.of(
         {
             "id": 1,
@@ -172,6 +1316,18 @@ createServer(config, webpackConfig, (app) => {
             Math.random() * 300
         );
     });
+
+    app.get('/api/result/:id', function(req,res, next) {
+        let id = req.params.id;
+        let result = fullResults.filter(result => result.compid == id);
+
+        setTimeout(
+            function() {
+                res.send(result.toJS());
+            },
+            Math.random() * 300
+        ); 
+   });
 
 
 });

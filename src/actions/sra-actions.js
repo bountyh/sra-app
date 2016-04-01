@@ -6,7 +6,6 @@ export const ADD_COMP = 'ADD_COMP';
 export const ADD_RESULT = 'ADD_RESULT';
 export const RECEIVE_COMPS = 'RECEIVE_COMPS';
 export const ADD_USER = 'ADD_USER';
-export const GET_RESULT = 'GET_RESULT';
 export const SAVE_COMP = 'SAVE_COMP';
 
 export function addComp(comp) {

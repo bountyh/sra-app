@@ -14,7 +14,7 @@ export default function(state = defaultState, action) {
     switch (action.type) {
 
         case GET_RESULT:
-            return state.update('newest', newest => action.payload[0]);
+            return state.update('result', result => action.payload);
             break;
 
         default:
