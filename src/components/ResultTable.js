@@ -7,6 +7,20 @@ class ResultTable extends React.Component {
     render() {
     	let { tableHeaders, result } = this.props;
 
+    	let rows;
+    	if (typeof result != 'undefined') {
+    		rows = result.results.
+    		map((row, i) => 
+            	<tr key={i}>
+            		{Object.keys(row).map((field, i) =>
+            			<td>{row[field]}</td>
+        			)}
+            	</tr>
+        	)
+    	}
+
+
+
         return (
             <table>
 	            <tbody>
@@ -15,13 +29,7 @@ class ResultTable extends React.Component {
 	                        <th key={i}>{header}</th>
 	                    )}
 	                </tr>
-	                {result.results.map((row, i) => 
-	                	<tr key={i}>
-	                		{Object.keys(row).map((field, i) =>
-	                			<td>{row[field]}</td>
-                			)}
-	                	</tr>
-                	)}
+	               	{rows}
 	            </tbody>
 	        </table>
         );

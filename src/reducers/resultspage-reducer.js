@@ -13,16 +13,12 @@ const defaultState = Map({
 });
 
 var sort_by = function(field, reverse, primer){
+   var key = function (x) {return primer ? primer(x[field]) : x[field]};
 
-   var key = primer ? 
-       function(x) {return primer(x[field])} : 
-       function(x) {return x[field]};
-
-   reverse = !reverse ? 1 : -1;
-
-   return function (a, b) {
-       return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
-     } 
+   return function (a,b) {
+    var A = key(a), B = key(b);
+    return ( (A < B) ? -1 : ((A > B) ? 1 : 0) ) * [-1,1][+!!reverse];                  
+   }
 }
 
 export default function(state = defaultState, action) {
@@ -38,7 +34,16 @@ export default function(state = defaultState, action) {
         	break;
 
         case REORDER_RESULTS:
-        	return state.update('results', results => results.sort(sort_by(action.payload.orderBy, action.payload.reverse, action.payload.primer)))
+          // Not shure if this is the best approach..
+          let tempResults = [];
+          let currResults = state.get('results');
+          for (let result in currResults) {
+            tempResults.push(currResults[result]);
+          }
+          
+          let results = tempResults.sort(sort_by(action.payload.orderBy, action.payload.reverse, action.payload.primer));
+
+        	return state.update('results', res => results);
         	break;
 
         default:

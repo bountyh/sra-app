@@ -12,7 +12,8 @@ export function reorderResults(orderBy, reverse = false) {
 	switch (orderBy) {
 		case 'Date':
 			primer = function(a) {
-				return Date.parse(a);
+				let parts = a.split('.');
+				return new Date(parts[2], parts[1], parts[0]);
 			}
 		break;
 
@@ -22,8 +23,6 @@ export function reorderResults(orderBy, reverse = false) {
 			}
 		break;
 	}
-
-	
 
 	return {
 		type: REORDER_RESULTS,

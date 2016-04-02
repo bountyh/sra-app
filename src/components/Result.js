@@ -20,24 +20,41 @@ class Result extends React.Component {
         );
 
         let nonCombinedHeaders = List.of(
+            "Kilpailija",
+            "Aika",
             "Sijoitus",
             "Kokonaispisteet",
-            "Aika",
             "Osumakerroin",
             "Rastipisteet",
             "Rasti %",
-            "Kilpailija",
             "Luokka",
         );
+
+        let results,
+            tabs;
+        if (typeof result.stages != 'undefined') {
+            tabs = result.stages.map((stage, i) => 
+                <li key={i}>{stage.name}</li>
+            )
+
+            results = result.stages.map((stage, i) =>
+                <section key={i}>
+                    <h2>{stage.name}</h2>
+                    <ResultTable tableHeaders={nonCombinedHeaders} result={stage} />
+                </section>
+            )
+        }
 
         return (
             <section>
                 <h1>Kilpailun tulokset</h1>
                 <ul className="tabs">
                     <li>Yhdistetyt</li>
+                    {tabs}
                 </ul>
                 <h2>Yhdistetyt</h2>
                 <ResultTable tableHeaders={tableHeaders} result={result.combined}/>
+                {results}
             </section>
         );
     }

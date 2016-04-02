@@ -6,14 +6,15 @@ class ResultsPage extends React.Component {
 
     render() {
     	const { results, competitors, reorderResults } = this.props;
+
         return (
             <section>
                 <h1>Tuloksia</h1>
                 <table>
                     <tbody>
                     	<tr>
-                    		<th>Kilpailun nimi</th>
-                    		<th>Päivämäärä</th>
+                    		<th>Kilpailun nimi<button onClick={reorderResults.bind(null, 'name', false)}>Z-a</button><button onClick={reorderResults.bind(null, 'name', true)}>A-z</button></th>
+                    		<th>Päivämäärä<button onClick={reorderResults.bind(null, 'Date', false)}>&uarr;</button><button onClick={reorderResults.bind(null, 'Date', true)}>&darr;</button></th>
                     		<th>Voittaja</th>
                     	</tr>
                     	{results.map((result, i) => 
