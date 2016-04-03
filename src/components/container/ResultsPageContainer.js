@@ -4,7 +4,8 @@ import Wrapped from '../ResultsPage';
 import {
     getResults,
     getCompetitors,
-    reorderResults
+    reorderResults,
+    searchResults,
 } from '../../actions/resultspage-actions';
 
 export default connect(
@@ -15,6 +16,7 @@ export default connect(
     dispatch => bindActionCreators({
     	getResults,
     	getCompetitors,
-        reorderResults
+        reorderResults,
+        searchResults,
     }, dispatch)
 )(Wrapped);

@@ -1,11 +1,13 @@
 import axios from 'axios';
 import { List } from 'immutable';
 import sraService from '../services/sra-service.localhost';
+import localStorage from '../services/sra-service.localStorage';
 
 export const GET_RESULTS = 'GET_RESULTS';
 export const GET_RESULT = 'GET_RESULT';
 export const GET_COMPETITORS = 'GET_COMPETITORS';
 export const REORDER_RESULTS = 'REORDER_RESULTS';
+export const SEARCH_RESULTS = 'SEARCH_RESULTS';
 
 export function reorderResults(orderBy, reverse = false) {
 	let primer;
@@ -32,6 +34,20 @@ export function reorderResults(orderBy, reverse = false) {
 			primer: primer
 		}
 	};
+}
+
+export function searchResults(query) {
+	return function(dispatch) {
+		return localStorage.get('results').then(results => {
+			dispatch({
+				type: SEARCH_RESULTS,
+				payload: {
+					query: query,
+					storage: results
+				}
+			});
+		});
+	}
 }
 
 export function getResults() {

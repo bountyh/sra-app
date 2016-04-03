@@ -23,17 +23,6 @@ export function addResult(result) {
     };
 }
 
-export function getResult(id) {
-    return function (dispatch) {
-        return sraService.getResult(id).then(result => {
-            dispatch({
-                type: GET_RESULT,
-                payload: result
-            });
-        });
-    };
-}
-
 export function addUser(user) {
     return function(dispatch) {
         return sraService.save(user, 'user').then(() => {

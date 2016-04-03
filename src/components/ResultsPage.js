@@ -5,11 +5,14 @@ import ResultRow from './ResultRow';
 class ResultsPage extends React.Component {
 
     render() {
-    	const { results, competitors, reorderResults } = this.props;
+    	const { results, competitors, reorderResults, searchResults } = this.props;
 
         return (
             <section>
                 <h1>Tuloksia</h1>
+                <form onSubmit={this.onSubmit} onKeyUp={this.keyPress.bind(this)}>
+                    <input ref="search" placeholder="Hae"/>
+                </form>
                 <table>
                     <tbody>
                     	<tr>
@@ -24,6 +27,14 @@ class ResultsPage extends React.Component {
                 </table>
             </section>
         );
+    }
+
+    onSubmit(e) {
+        e.preventDefault();
+    }
+
+    keyPress(e) {
+        this.props.searchResults(this.refs.search.value);
     }
 };
 

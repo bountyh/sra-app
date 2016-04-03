@@ -5,12 +5,13 @@ import ResultTable from './ResultTable';
 class Result extends React.Component {
     constructor(props) {
         super(props);
-        let { getResult } = this.props;
+        let { getResult, getCompetitors } = this.props;
         getResult(this.props.params.id);
+        getCompetitors();
     }
 
     render() {
-        let { result } = this.props;
+        let { result, competitors } = this.props;
         let tableHeaders = List.of(
             "Sijoitus",
             "Kilpailu %",
@@ -40,7 +41,7 @@ class Result extends React.Component {
             results = result.stages.map((stage, i) =>
                 <section key={i}>
                     <h2>{stage.name}</h2>
-                    <ResultTable tableHeaders={nonCombinedHeaders} result={stage} />
+                    <ResultTable tableHeaders={nonCombinedHeaders} competitors={competitors} result={stage} />
                 </section>
             )
         }
@@ -53,7 +54,7 @@ class Result extends React.Component {
                     {tabs}
                 </ul>
                 <h2>Yhdistetyt</h2>
-                <ResultTable tableHeaders={tableHeaders} result={result.combined}/>
+                <ResultTable tableHeaders={tableHeaders} competitors={competitors} result={result.combined}/>
                 {results}
             </section>
         );
