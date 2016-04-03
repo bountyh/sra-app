@@ -18,7 +18,10 @@ class ResultTable extends React.Component {
                                     return row[field];
                                 }
                                 else {
-                                    return competitors.find(competitor => competitor.id === row.user).name
+                                    let competitor = competitors.find(competitor => competitor.id === row.user)
+                                    if (competitor.hasOwnProperty('name')) {
+                                        return competitor.name;
+                                    }
                                 }
                             })()}
                         </td>

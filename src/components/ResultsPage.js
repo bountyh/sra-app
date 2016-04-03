@@ -10,8 +10,8 @@ class ResultsPage extends React.Component {
         return (
             <section>
                 <h1>Tuloksia</h1>
-                <form onSubmit={this.onSubmit} onKeyUp={this.keyPress.bind(this)}>
-                    <input ref="search" placeholder="Hae"/>
+                <form onSubmit={this.onSubmit.bind(this)} onKeyUp={this.keyPress.bind(this)}>
+                    <input type="text" ref="search" placeholder="Hae"/>
                 </form>
                 <table>
                     <tbody>

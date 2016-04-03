@@ -1329,6 +1329,11 @@ createServer(config, webpackConfig, (app) => {
         ); 
    });
 
+    app.post('/api/login', function(req, res, next) {
+        
+        res.send(List.of({"uid": 1, "name": "b0untyhh"}).toJS());
+    });
+
 
 });
 

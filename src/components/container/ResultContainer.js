@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import Wrapped from '../Result';
 import {
     getResult,
-    setActiveRow
+    setActiveRow,
+    filterResult
 } from '../../actions/result-actions';
 import { getCompetitors } from '../../actions/resultspage-actions';
 
@@ -15,6 +16,7 @@ export default connect(
     dispatch => bindActionCreators({
     	getResult,
     	setActiveRow,
-    	getCompetitors
+    	getCompetitors,
+        filterResult
     }, dispatch)
 )(Wrapped);

@@ -11,7 +11,7 @@ class Result extends React.Component {
     }
 
     render() {
-        let { result, competitors } = this.props;
+        let { result, competitors, filterResult } = this.props;
         let tableHeaders = List.of(
             "Sijoitus",
             "Kilpailu %",
@@ -33,9 +33,10 @@ class Result extends React.Component {
 
         let results,
             tabs;
+
         if (typeof result.stages != 'undefined') {
             tabs = result.stages.map((stage, i) => 
-                <li key={i}>{stage.name}</li>
+                <li key={i}><button onClick={filterResult.bind(null, stage.id)}>{stage.name}</button></li>
             )
 
             results = result.stages.map((stage, i) =>
@@ -50,7 +51,8 @@ class Result extends React.Component {
             <section>
                 <h1>Kilpailun tulokset</h1>
                 <ul className="tabs">
-                    <li>Yhdistetyt</li>
+                    <li><button onClick={filterResult.bind(null, 'all')}>Kaikki</button></li>
+                    <li><button onClick={filterResult.bind(null, 'combined')}>Yhdistetyt</button></li>
                     {tabs}
                 </ul>
                 <h2>Yhdistetyt</h2>

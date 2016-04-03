@@ -8,7 +8,8 @@ export default {
             .then(response => response.data);
     },
 
-    save: (data, type) => {
-        return axios.post('http://localhost:8888/api/'+type, data);
+    post: (type, data) => {
+    	console.log(typeof data);
+        return axios.post('http://localhost:8888/api/'+type, [data]);
     }
 };
