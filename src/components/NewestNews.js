@@ -11,7 +11,7 @@ class NewestNews extends React.Component {
             <div>
                 {newest.news.map((news, i) =>
                     <article key={i}>
-                        <h2>{news.title}</h2>
+                        <h3>{news.title}</h3>
                         <p>{news.body.substring(0,255)}...</p>
                         <Link className="read-more" to={"/news/"+news.id}>Lue Lisää</Link>
                     </article>

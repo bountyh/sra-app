@@ -1,11 +1,11 @@
 $font-size: 16px;
+$light-blue: #0d7fc0;
 
 .root {
 
     h1 {
         margin: 0;
         padding: 0;
-        text-align: center;
 
         img {
             width: 200px;
@@ -25,12 +25,43 @@ $font-size: 16px;
         background-color: rgb(255, 255, 255);
         color: rgb(0, 0, 0);
         font-size: $font-size;
-        padding: 2rem;
         font-family: Lato;
     }
 
-    button, input {
-        padding: .5rem;
+    a {
+        color: #0a7ebe;
+        text-decoration: none;
+    }
+
+    a, p {
+        font-size: 14px;
+    }
+
+    h1 {
+        text-align: left;
+        font-size: 24px;
+        font-weight: normal;
+    }
+
+    h2 {
+        font-weight: normal;
+        font-size: 21px;
+    }
+
+    h3 {
+        font-weight: normal;
+        font-size: 18px;
+    }
+
+    button, input[type=submit] {
+        background-color: $light-blue;
+        color: #fff;
+        border: 0;
+        padding: 5px;
+    }
+
+    li {
+        list-style: none;
     }
 
     [disabled] {

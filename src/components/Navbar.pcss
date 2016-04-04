@@ -1,0 +1,54 @@
+$light-blue: #0d7fc0;
+
+.root {
+	padding: 1rem 2rem;
+	display: table;
+	width: 100%;
+	border-bottom: 1px solid #e6e6e6;
+
+	> section {
+		float: right;
+
+		input[type=submit] {
+			height: 41px;
+		}
+
+		> div {
+			margin-bottom: 10px;
+		}
+
+		a {
+			font-size: 14px;
+			color: #000;
+		}
+
+		span {
+			padding: 0 10px;
+		}
+	}
+
+	> div {
+		width: 30%;
+		float: left;
+
+		span {
+			color: $light-blue;
+		}
+
+		a {
+			float: left;
+			width: 20%;
+		}
+	}
+}
+
+.li {
+	clear: both;
+	display: table;
+	li {
+		float: left;
+	}
+	li:not(:last-child) {
+		margin-right: 10px;
+	}
+}

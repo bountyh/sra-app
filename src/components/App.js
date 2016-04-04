@@ -6,11 +6,16 @@ import Navbar from './Navbar';
 export default class App extends React.Component {
 
     render() {
+    	let containerStyles = {
+    		padding: '0 50px'
+    	};
 
         return (
             <div className={styles.root}>
                 <Navbar />
-                {this.props.children}
+                <section style={containerStyles}>
+                	{this.props.children}
+                </section>
             </div>
         );
     }

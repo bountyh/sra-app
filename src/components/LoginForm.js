@@ -9,7 +9,7 @@ class LoginForm extends React.Component {
         return (
             <form onSubmit={this.onSubmit.bind(this)}>
             	<input type="text" ref="user" placeholder="Käyttäjänimi" />
-            	<input type="password" ref="pass" placeholder="Password" />
+            	<input type="password" ref="pass" placeholder="Salasana" />
             	<input type="submit" value="Kirjaudu" />
             </form>
         );

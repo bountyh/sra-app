@@ -19,7 +19,7 @@ class ResultTable extends React.Component {
                                 }
                                 else {
                                     let competitor = competitors.find(competitor => competitor.id === row.user)
-                                    if (competitor.hasOwnProperty('name')) {
+                                    if (typeof competitor != 'undefined' && competitor.hasOwnProperty('name')) {
                                         return competitor.name;
                                     }
                                 }

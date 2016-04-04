@@ -8,10 +8,12 @@ class Result extends React.Component {
         let { getResult, getCompetitors } = this.props;
         getResult(this.props.params.id);
         getCompetitors();
+
+        this.state = {visible: 'all'};
     }
 
     render() {
-        let { result, competitors, filterResult } = this.props;
+        let { result, competitors } = this.props;
         let tableHeaders = List.of(
             "Sijoitus",
             "Kilpailu %",
@@ -36,11 +38,11 @@ class Result extends React.Component {
 
         if (typeof result.stages != 'undefined') {
             tabs = result.stages.map((stage, i) => 
-                <li key={i}><button onClick={filterResult.bind(null, stage.id)}>{stage.name}</button></li>
+                <li key={i}><button onClick={this.onClick.bind(null, i, this)}>{stage.name}</button></li>
             )
 
             results = result.stages.map((stage, i) =>
-                <section key={i}>
+                <section key={i} className={'stage-'+i}>
                     <h2>{stage.name}</h2>
                     <ResultTable tableHeaders={nonCombinedHeaders} competitors={competitors} result={stage} />
                 </section>
@@ -51,15 +53,21 @@ class Result extends React.Component {
             <section>
                 <h1>Kilpailun tulokset</h1>
                 <ul className="tabs">
-                    <li><button onClick={filterResult.bind(null, 'all')}>Kaikki</button></li>
-                    <li><button onClick={filterResult.bind(null, 'combined')}>Yhdistetyt</button></li>
+                    <li><button onClick={this.onClick.bind(null, 'all', this)}>Kaikki</button></li>
+                    <li><button onClick={this.onClick.bind(null, 'combined', this)}>Yhdistetyt</button></li>
                     {tabs}
                 </ul>
+                <section className="stage-combined">
                 <h2>Yhdistetyt</h2>
-                <ResultTable tableHeaders={tableHeaders} competitors={competitors} result={result.combined}/>
+                    <ResultTable tableHeaders={tableHeaders} competitors={competitors} result={result.combined}/>
+                </section>
                 {results}
             </section>
         );
+    }
+
+    onClick(id, self) {
+        self.state.visible = id;
     }
 };
 

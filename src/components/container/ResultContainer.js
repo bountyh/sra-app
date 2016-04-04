@@ -4,7 +4,6 @@ import Wrapped from '../Result';
 import {
     getResult,
     setActiveRow,
-    filterResult
 } from '../../actions/result-actions';
 import { getCompetitors } from '../../actions/resultspage-actions';
 
@@ -17,6 +16,5 @@ export default connect(
     	getResult,
     	setActiveRow,
     	getCompetitors,
-        filterResult
     }, dispatch)
 )(Wrapped);
